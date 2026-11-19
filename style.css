@@ -31,6 +31,34 @@ body {
   gap: 70px;
   align-items: center;
 }
+.demonstracao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: -55px;
+}
+#mostrarPersonasBtn, .personaBtn {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 12px;
+  background: white;
+  color: #1E3A8A;
+  cursor: pointer;
+}
+#mostrarPersonasBtn {
+  padding: 0;
+  background: transparent;
+  color: white;
+}
+#opcoesPersonas {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+#opcoesPersonas[hidden] {
+  display: none;
+}
 .imagemTitulo {
   margin-bottom: 20px;
   border-radius: 16px;
