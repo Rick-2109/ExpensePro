@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>In&iacute;cio | ExpensePro</title>
+  <link rel="stylesheet" href="principal.css">
+  <script src="despesas.js" defer></script>
+  <script src="principal.js" defer></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="logo"><img src="assets/Ícone de Recibo com Gráfico de Crescimento (1).png" alt="ExpensePro"></div>
+    <a href="principal.html" class="sidebar-item active"><img src="assets/house.svg" alt=""><span>In&iacute;cio</span></a>
+    <a href="spend-page.html" class="sidebar-item"><img src="assets/receipt-text.svg" alt=""><span>Gastos</span></a>
+    <a href="dados-page.html" class="sidebar-item"><img src="assets/chart-spline.svg" alt=""><span>Dados</span></a>
+    <a href="usuario-page.html" class="sidebar-item"><img src="assets/circle-user.svg" alt=""><span>Usu&aacute;rio</span></a>
+  </aside>
+
+  <main>
+    <header>
+      <div><p class="small-title">PAINEL DE CONTROLE</p><h1>Vis&atilde;o geral</h1><p id="dataAtual"></p></div>
+      <a class="button" href="spend-page.html">+ Nova despesa</a>
+    </header>
+
+    <section class="welcome">
+      <h2>Cada centavo no seu lugar.</h2>
+      <p>Registre e acompanhe as despesas da sua equipe.</p>
+    </section>
+
+    <section class="cards">
+      <article><p>Total neste m&ecirc;s</p><strong id="totalMes">R$ 0,00</strong></article>
+    </section>
+
+    <section class="panel">
+      <h2>Despesas recentes</h2>
+      <p id="listaVazia" class="empty">Nenhuma despesa registrada ainda.</p>
+      <div id="tabelaContainer" class="table-wrap" hidden>
+        <table>
+          <thead><tr><th>Consultor</th><th>Descri&ccedil;&atilde;o</th><th>Categoria</th><th>Valor</th><th>Data</th></tr></thead>
+          <tbody id="despesasRecentes"></tbody>
+        </table>
+      </div>
+      <p><a href="spend-page.html">Adicionar despesa</a></p>
+    </section>
+  </main>
+</body>
+</html>

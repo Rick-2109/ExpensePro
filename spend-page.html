@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gastos | ExpensePro</title>
+  <link rel="stylesheet" href="principal.css">
+  <link rel="stylesheet" href="spend-page.css">
+  <script src="despesas.js" defer></script>
+  <script src="spend-page.js" defer></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="logo"><img src="assets/Ícone de Recibo com Gráfico de Crescimento (1).png" alt="ExpensePro"></div>
+    <a href="principal.html" class="sidebar-item"><img src="assets/house.svg" alt=""><span>In&iacute;cio</span></a>
+    <a href="spend-page.html" class="sidebar-item active"><img src="assets/receipt-text.svg" alt=""><span>Gastos</span></a>
+    <a href="dados-page.html" class="sidebar-item"><img src="assets/chart-spline.svg" alt=""><span>Dados</span></a>
+    <a href="usuario-page.html" class="sidebar-item"><img src="assets/circle-user.svg" alt=""><span>Usu&aacute;rio</span></a>
+  </aside>
+
+  <main>
+    <header>
+      <div><p class="small-title">DESPESAS DA EQUIPE</p><h1>Adicionar despesa</h1><p>Preencha os detalhes do gasto.</p></div>
+    </header>
+
+    <section class="expense-panel">
+      <form id="despesaForm">
+        <div class="form-grid">
+          <label>Descri&ccedil;&atilde;o
+            <input id="descricao" type="text" placeholder="Ex.: Corrida de aplicativo" required>
+          </label>
+          <label>Categoria
+            <select id="categoria" required>
+              <option value="">Selecione uma categoria</option>
+              <option>Transporte</option>
+              <option>Hospedagem</option>
+              <option>Alimenta&ccedil;&atilde;o</option>
+              <option>Materiais</option>
+              <option>Outros</option>
+            </select>
+          </label>
+          <label>Valor (R$)
+            <input id="valor" type="number" min="0.01" step="0.01" placeholder="0,00" required>
+          </label>
+          <label>Data da despesa
+            <input id="data" type="date" required>
+          </label>
+          <label>Nome do consultor
+            <input id="consultor" type="text" placeholder="Ex.: Gustavo" required>
+          </label>
+          <label class="full-width">Observa&ccedil;&otilde;es
+            <textarea id="observacoes" rows="3" placeholder="Detalhe adicional (opcional)"></textarea>
+          </label>
+        </div>
+        <button class="button" type="submit">Salvar despesa</button>
+        <p id="mensagem" role="status"></p>
+      </form>
+    </section>
+
+    <section class="expense-panel recent">
+      <h2>Despesas adicionadas</h2>
+      <p id="listaVazia" class="empty">Ainda n&atilde;o h&aacute; despesas registradas.</p>
+      <div id="tabelaContainer" class="table-wrap" hidden>
+        <table>
+          <thead><tr><th>Consultor</th><th>Descri&ccedil;&atilde;o</th><th>Categoria</th><th>Valor</th><th>Data</th><th>Observa&ccedil;&otilde;es</th></tr></thead>
+          <tbody id="listaDespesas"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
